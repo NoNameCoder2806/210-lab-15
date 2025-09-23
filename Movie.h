@@ -12,9 +12,9 @@ using namespace std;
 class Movie
 {
 private:
-    string screenWriter;
-    int yearReleased;
-    string title;
+    string screenWriter;      // Screenwriter
+    int yearReleased;         // Year Released
+    string title;             // Title
 
 public:
     // Accessors / Getters
@@ -58,6 +58,7 @@ public:
     */
     void print() const
     {
+        // Use cout and getters
         cout << "Movie: " << getTitle() << endl;
         cout << "   Year released: " << getYearReleased() << endl;
         cout << "   Screenwriter: " << getScreenWriter() << endl;
