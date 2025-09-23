@@ -8,8 +8,6 @@
 #include "Movie.h"
 using namespace std;
 
-// Constants
-
 // Function prototypes
 void readMovies(string path, vector<Movie>& movies);
 
@@ -25,6 +23,7 @@ int main()
     readMovies("input.txt", movies);
 
     // Display the Movie objects in the vector
+    displayMovies(movies);
 
     return 0;
 }
@@ -86,11 +85,10 @@ void readMovies(string path, vector<Movie>& movies)
 }
 
 /*
-    readMovies()
-    Read the Movie objects from a file and store them in the vector
+    displayMovies()
+    Display all Movie objects stored in a vector.
     Arguments:
-        - path: a string representing the file path to read from
-        - movies: a reference to a vector of Movie objects where the read movies will be stored
+        - movies: a reference to a constant vector of Movie objects to be displayed
     Return: none
 */
 void displayMovies(const vector<Movie>& movies)
@@ -100,5 +98,8 @@ void displayMovies(const vector<Movie>& movies)
     {
         // Display the Movie object via the print() function
         movies.at(i).print();
+
+        // Enter a new line
+        cout << endl;
     }
 }
