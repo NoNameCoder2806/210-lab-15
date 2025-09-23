@@ -63,7 +63,7 @@ void readMovies(string path, vector<Movie>& movies)
         {
             break;
         }
-        temp.setTitle(line);
+        temp.setScreenWriter(line);
 
         // Read and store the released year of the Movie
         if (!getline(fin, line))    // If we can't read the line, we break
@@ -77,7 +77,7 @@ void readMovies(string path, vector<Movie>& movies)
         {
             break;
         }
-        temp.setScreenWriter(line);
+        temp.setTitle(line);
 
         // Add the Movie object to the vector
         movies.push_back(temp);
