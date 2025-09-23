@@ -13,14 +13,18 @@ using namespace std;
 // Function prototypes
 void readMovies(string path, vector<Movie>& movies);
 
+void displayMovies(const vector<Movie>& movies);
+
 // Main function
 int main()
 {
     // Declare a vector to hold Movie objects
     vector<Movie> movies;
 
-    // Read the movies
+    // Read the data of input.txt
     readMovies("input.txt", movies);
+
+    // Display the Movie objects in the vector
 
     return 0;
 }
@@ -78,5 +82,23 @@ void readMovies(string path, vector<Movie>& movies)
 
         // Add the Movie object to the vector
         movies.push_back(temp);
+    }
+}
+
+/*
+    readMovies()
+    Read the Movie objects from a file and store them in the vector
+    Arguments:
+        - path: a string representing the file path to read from
+        - movies: a reference to a vector of Movie objects where the read movies will be stored
+    Return: none
+*/
+void displayMovies(const vector<Movie>& movies)
+{
+    // Iterate through the vector
+    for (int i = 0; i < movies.size(); i++)
+    {
+        // Display the Movie object via the print() function
+        movies.at(i).print();
     }
 }

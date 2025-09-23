@@ -18,17 +18,17 @@ private:
 
 public:
     // Accessors / Getters
-    string getScreenWriter()
+    string getScreenWriter() const
     {
         return screenWriter;
     }
 
-    int getYearReleased()
+    int getYearReleased() const
     {
         return yearReleased;
     }
 
-    string getTitle()
+    string getTitle() const
     {
         return title;
     }
@@ -56,7 +56,7 @@ public:
         Arguments: none
         Return: none
     */
-    void print()
+    void print() const
     {
         cout << "Movie: " << getTitle() << endl;
         cout << "   Year released: " << getYearReleased() << endl;
