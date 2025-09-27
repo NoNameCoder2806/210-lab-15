@@ -49,7 +49,7 @@ public:
         title = t;
     }
     
-    // Methods
+    // Member functions
     /*
         print()
         Display the information of a Movie object
